@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>Info</h2>
+
+<form action="" method="post">
+
+    Id: <input type="text" name="Id" value="@(Model != null ? Model.Id : "")" class="form-control" />
+    @Html.ValidationMessage("Id", new { @class = "text-danger" })<br>
+
+    Name: <input type="text" name="Name" class="form-control" />
+    @Html.ValidationMessage("Name", new { @class = "text-danger" })<br />
+
+    Dob: <input type="date" name="Dob" class="form-control" />
+    @Html.ValidationMessage("Dob", new { @class = "text-danger" })<br />
+
+    EMmail: <input type="text" name="Email" class="form-control" />
+    @Html.ValidationMessage("Email", new { @class = "text-danger" })<br />
+
+    Gender:
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+            Male
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+            Female
+        </label>
+    </div>
+
+
+    @Html.ValidationMessage("Gender", new { @class = "text-danger" })<br />
+
+    Dept.: <select name="Dept" class="form-control">
+
+        <option value="CSE">CSE</option>
+        <option value="EEE">EEE</option>
+
+    </select>
+    @Html.ValidationMessage("Dept", new { @class = "text-danger" })<br />
+
+    <input type="submit" class="btn btn-success" />
+
+</form>
+
