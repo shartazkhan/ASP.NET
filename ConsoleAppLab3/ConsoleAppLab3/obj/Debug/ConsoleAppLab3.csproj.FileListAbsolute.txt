@@ -1,0 +1,8 @@
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\bin\Debug\ConsoleAppLab3.exe.config
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\bin\Debug\ConsoleAppLab3.exe
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\bin\Debug\ConsoleAppLab3.pdb
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\obj\Debug\ConsoleAppLab3.csproj.AssemblyReference.cache
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\obj\Debug\ConsoleAppLab3.csproj.SuggestedBindingRedirects.cache
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\obj\Debug\ConsoleAppLab3.csproj.CoreCompileInputs.cache
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\obj\Debug\ConsoleAppLab3.exe
+C:\Users\shart\source\repos\ConsoleAppLab3\ConsoleAppLab3\obj\Debug\ConsoleAppLab3.pdb
