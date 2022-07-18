@@ -1,0 +1,46 @@
+﻿@model List<MediaBazar.Models.Official>
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>UserList</h2>
+
+<form action="/Dashboard/UserList" method="post">
+
+
+    <div>
+        Add New user
+        <a class="btn btn-primary" href="/Dashboard/AddUser" role="button">Add</a>
+
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Userame</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var p in Model)
+            {
+                <tr class="table-dark" onClick="document.location.href='/Dashboard/EditUser/@p.Id';">
+
+                    <td>@p.Username</td>
+                    <td>@p.Name</td>
+                    <td>@p.Type</td>
+
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</form>

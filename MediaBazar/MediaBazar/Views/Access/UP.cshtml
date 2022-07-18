@@ -1,0 +1,26 @@
+﻿@model MediaBazar.Models.User
+@{
+    ViewBag.Title = "UP";
+    Layout = "~/Views/Shared/_LayoutAccess.cshtml";
+}
+
+<h2>UP</h2>
+<span class="text-info">@TempData["msg"]</span>
+
+<form action="" method="post">
+
+
+
+    <input type="text" class="form-control" name="Username" placeholder="Username" />
+    @Html.ValidationMessage("Username", new { @class = "text-danger" })<br />
+
+
+    <input type="password" class="form-control" name="Password" placeholder="Password" />
+    @Html.ValidationMessage("Password", new { @class = "text-danger" })<br />
+
+
+
+    <input type="submit" class="btn btn-success" />
+
+    <a class="btn btn-primary" href="/Access/Index" role="button">Login</a>
+</form>

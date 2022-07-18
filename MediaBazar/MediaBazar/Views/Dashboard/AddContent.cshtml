@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AddContent";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>AddContent</h2>
+
+<span class="text-info">@TempData["msg"]</span>
+
+<form action="" method="post">
+
+    <input type="text" class="form-control" name="Name" value="@(Model != null ? Model.Name : "")" placeholder="Name" />
+    @Html.ValidationMessage("Name", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Type" value="@(Model != null ? Model.Type : "")" placeholder="Type" />
+    @Html.ValidationMessage("Type", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Path" value="@(Model != null ? Model.Path : "")" placeholder="Path" />
+    @Html.ValidationMessage("Path", new { @class = "text-danger" })<br />
+
+
+    <input type="submit" value="Add" class="btn btn-success" />
+
+</form>

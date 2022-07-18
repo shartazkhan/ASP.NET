@@ -1,0 +1,48 @@
+﻿@model MediaBazar.Models.Official
+@{
+    ViewBag.Title = "EditUser";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>EditUser</h2>
+
+
+<div class="form-group">
+    <label for="exampleSelect1" class="form-label mt-4">Example select</label>
+    <select class="form-select" id="exampleSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+
+
+<form action="" method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <input type="text" class="form-control" name="Name" value="@Model.Name" placeholder="Name" />
+    @Html.ValidationMessage("Name", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Username" value="@(Model != null ? Model.Username : "")" placeholder="Username" />
+    @Html.ValidationMessage("Username", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Dob" value="@(Model != null ? Model.Dob : "")" placeholder="Dob" />
+    @Html.ValidationMessage("Dob", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Phone" value="@(Model != null ? Model.Phone : "")" placeholder="Phone" />
+    @Html.ValidationMessage("Phone", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Email" value="@(Model != null ? Model.Email : "")" placeholder="Email" />
+    @Html.ValidationMessage("Email", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Subscription" placeholder="Subscription" />
+    @Html.ValidationMessage("Subscription", new { @class = "text-danger" })<br />
+
+
+    <input type="submit" class="btn btn-success" />
+    <a class="btn btn-danger" href="/Dashboard/Delete/@Model.Id" role="button">Delete</a>
+
+</form>

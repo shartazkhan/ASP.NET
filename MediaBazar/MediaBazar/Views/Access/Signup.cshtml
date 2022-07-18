@@ -1,0 +1,37 @@
+﻿@model MediaBazar.Models.Consumer
+
+
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_LayoutAccess.cshtml";
+}
+
+<h2>Signup</h2>
+
+<span class="text-info">@TempData["msg"]</span>
+
+<form action="" method="post">
+
+    <input type="text" class="form-control" name="Name" value="@(Model != null ? Model.Name : "")" placeholder="Name" />
+    @Html.ValidationMessage("Name", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Username" value="@(Model != null ? Model.Username : "")" placeholder="Username" />
+    @Html.ValidationMessage("Username", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Dob" value="@(Model != null ? Model.Dob : "")" placeholder="Dob" />
+    @Html.ValidationMessage("Dob", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Phone" value="@(Model != null ? Model.Phone : "")" placeholder="Phone" />
+    @Html.ValidationMessage("Phone", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Email" value="@(Model != null ? Model.Email : "")" placeholder="Email" />
+    @Html.ValidationMessage("Email", new { @class = "text-danger" })<br />
+
+    <input type="text" class="form-control" name="Subscription" placeholder="Subscription" />
+    @Html.ValidationMessage("Subscription", new { @class = "text-danger" })<br />
+
+
+    <input type="submit" class="btn btn-success" />
+
+    or  <a class="btn btn-primary" href="/Access/Index" role="button">Login</a>
+</form>

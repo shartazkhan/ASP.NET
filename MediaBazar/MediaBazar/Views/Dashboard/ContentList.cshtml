@@ -1,0 +1,51 @@
+﻿@model List<MediaBazar.Models.Content>
+@{
+    ViewBag.Title = "ContentList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div>
+    <h2>Contents</h2>
+</div>
+
+<div>
+    Add New Movie
+    <a class="btn btn-primary" href="/Dashboard/AddContent" role="button">Add</a>
+
+</div>
+
+<form action="/Dashboard/ContentList" method="post">
+
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Serial</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Path</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var p in Model)
+            {
+                <tr class="table-dark" onClick="document.location.href='/Dashboard/EditContent/@p.Cid';">
+
+                    <td>@p.Cid</td>
+                    <td>@p.Name</td>
+                    <td>@p.Type</td>
+                    <td>@p.Path</td>
+
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</form>
